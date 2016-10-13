@@ -13,9 +13,14 @@ Harjoitustyönä tehtiin nettisivut...
 ###4. Ohjelman tarvitsemat tiedostot ja tietokannat
 ###5. Bugit ja jatkokehitys
 ###6. Oppimisen analysointi
-###7. Tekijät, töiden jakautuminen ja aikataulu
 
-Töiden jako ja kulunut aika:
+Sanna
+Olen oppinut... Haasteellista oli...
+
+Valtteri
+Olen oppinut... Haasteellista oli...
+
+###7. Töiden jako ja kulunut aika
 
 Sanna
 
