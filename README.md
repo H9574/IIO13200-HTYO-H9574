@@ -21,9 +21,17 @@ Harjoitustyönä tehtiin nettisivun, jossa on:
 ###6. Oppimisen analysointi
 ###7. Tekijät, töiden jakautuminen ja aikataulu
 
+Sannan Aikataulut
+
 |pvm|tunnit|tehty|ongelmia|
 |---|---|---|---|
-|13.10.|2h|Repon luominen ja aiheen keksiminen|Saada repo toimimaan oikein ja näyttämään sivut|
+|13.10.|2h|Repon luominen|Saada repo toimimaan oikein ja näyttämään sivut|
+
+Valtterin aikataulut
+
+|pvm|tunnit|tehty|ongelmia|
+|---|---|---|---|
+|13.10.|2h|Aiheen keksiminen|Keksiä hyvä aihe|
 
 ![Alt text](/images/kuva.png "kuva")
 
