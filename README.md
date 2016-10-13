@@ -1,19 +1,19 @@
 Opintojakso IIO13200 
 ======
 
-Demo Saitti
+Harjoitustyö
 =====
-Satti-kansiossa on malliksi tehty website.
+##1. Asennus
+##2. Tietoa ohjelmasta
+##3. Kuvankaappaukset tärkeimmistä käyttöliittymistä + käyttöohje
+##4. Ohjelman tarvitsemat tiedostot ja tietokannat
+##5. Bugit ja jatkokehitys
+##6. Oppimisen analysointi
+##7. Tekijät, töiden jakautuminen ja aikataulu
 
-Viikkotehtävien palauttaminen
-====
-Viikkotehtävät kukin tekee itsenäisesti kotona/koulussa... Motto: tekemällä oppii!
-   
-Palauta ne seuraavasti:
-- Opintojakson alussa forkkaa GitHubista Reposiory IIO13200-NET-OHJELMOINTI omalle tunnuksellesi
-- Kloonaa Reposta paikallinen repo
-- Tee tehtävä. Testaa että toimii ja laatu ok.
-- Jos homma tehty oikein niin Commitoi paikalliseen Repoosi.
--  lopuksi Pushaa takaisin GitHubin Master Repoon.
+|pvm|tunnit|tehty|ongelmia|
+|---|---|---|---|
+|13.10.|2h|Repon luominen ja aiheen keksiminen|Saada repo toimimaan oikein ja näyttämään sivut|
+
 ![Alt text](/images/kuva.png "kuva")
 
