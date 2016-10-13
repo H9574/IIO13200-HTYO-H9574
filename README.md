@@ -31,7 +31,7 @@ Sannan Aikataulut
 
 |pvm|tunnit|tehty|ongelmia|
 |---|---|---|---|
-|13.10.|2h|Repon luominen|Saada repo toimimaan oikein ja näyttämään sivut|
+|13.10.|3h|Repon luominen ja speksi|Saada repo toimimaan oikein ja näyttämään sivut|
 
 Valtteri
 
@@ -44,7 +44,7 @@ Valtterin aikataulut
 
 |pvm|tunnit|tehty|ongelmia|
 |---|---|---|---|
-|13.10.|2h|Aiheen keksiminen|Keksiä hyvä aihe|
+|13.10.|2h|Aiheen keksiminen ja speksi|Keksiä hyvä aihe|
 
 ![Alt text](/images/kuva.png "kuva")
 
