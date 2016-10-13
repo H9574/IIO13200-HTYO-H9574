@@ -2,10 +2,19 @@
 
 ##Harjoitustyö
 
-Harjoitustyönä tein nettisivun, jossa on sisään kirjautuminen mysql avulla. Käyttäjä voi tallentaa elokuvia sekä hakea elokuvia ja tallentaa elokuvista kommentteja muille käyttäjille. Kommentteja voi lukea kirjautumatta sisään, mutta niitä ei voi muokata tai lisätä.
+Tekijät: Valtteri Mäntylä-Blå, Räisänen Sanna
 
 ###1. Asennus
 ###2. Tietoa ohjelmasta
+
+Harjoitustyönä tein nettisivun, jossa on:
+
+* Sisään kirjautuminen mysql ja uusien tunnusten luominen, salaaminen md5
+* Tallennetaan tietoa käyttäjän omaan tietokantaan
+* Tallennetaan tietoa yhteiseen tietokantaan ja käyttäjä voi muokata itse tallentamiaan tietoja
+* RSS feedin hakeminen toiselta sivulta
+* Tiedon välitys kahden sivun välillä
+
 ###3. Kuvankaappaukset tärkeimmistä käyttöliittymistä + käyttöohje
 ###4. Ohjelman tarvitsemat tiedostot ja tietokannat
 ###5. Bugit ja jatkokehitys
