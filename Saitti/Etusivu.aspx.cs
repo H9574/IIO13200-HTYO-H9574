@@ -11,4 +11,14 @@ public partial class Etusivu : System.Web.UI.Page
     {
 
     }
+
+    protected void LahetaKirjautuminen_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void TallennaUusi_Click(object sender, EventArgs e)
+    {
+
+    }
 }
