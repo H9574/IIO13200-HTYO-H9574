@@ -7,7 +7,7 @@ Tekijät: Valtteri Mäntylä-Blå, Räisänen Sanna
 ###1. Asennus
 ###2. Tietoa ohjelmasta
 
-Harjoitustyönä tein nettisivun, jossa on:
+Harjoitustyönä tehtiin nettisivun, jossa on:
 
 * Sisään kirjautuminen mysql ja uusien tunnusten luominen, salaaminen md5
 * Tallennetaan tietoa käyttäjän omaan tietokantaan
