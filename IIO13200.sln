@@ -24,49 +24,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Saitti", "Saitti\", "{3E07E
 		SlnRelativePath = "Saitti\"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Harjoitus_1", "Harjoitus_1\", "{48A95ECA-F9A9-4F56-A92B-5DDB5FC41317}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_11783"
-		Debug.AspNetCompiler.PhysicalPath = "Harjoitus_1\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_11783\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_11783"
-		Release.AspNetCompiler.PhysicalPath = "Harjoitus_1\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_11783\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "11783"
-		SlnRelativePath = "Harjoitus_1\"
-	EndProjectSection
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Tunti1509(1)", "\\storage\homes\H9574\Dox\Documents\Visual Studio 2015\WebSites\Tunti1509\", "{A5EE6178-1E16-4002-B859-08A15C5B9AE1}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_2150"
-		Debug.AspNetCompiler.PhysicalPath = "\\storage\homes\H9574\Dox\Documents\Visual Studio 2015\WebSites\Tunti1509\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2150\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_2150"
-		Release.AspNetCompiler.PhysicalPath = "\\storage\homes\H9574\Dox\Documents\Visual Studio 2015\WebSites\Tunti1509\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2150\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "2150"
-		SlnRelativePath = "\\storage\homes\H9574\Dox\Documents\Visual Studio 2015\WebSites\Tunti1509\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,14 +34,6 @@ Global
 		{3E07E2B3-CB80-4885-B897-D2149243510F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E07E2B3-CB80-4885-B897-D2149243510F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E07E2B3-CB80-4885-B897-D2149243510F}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{48A95ECA-F9A9-4F56-A92B-5DDB5FC41317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48A95ECA-F9A9-4F56-A92B-5DDB5FC41317}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48A95ECA-F9A9-4F56-A92B-5DDB5FC41317}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{48A95ECA-F9A9-4F56-A92B-5DDB5FC41317}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{A5EE6178-1E16-4002-B859-08A15C5B9AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5EE6178-1E16-4002-B859-08A15C5B9AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5EE6178-1E16-4002-B859-08A15C5B9AE1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5EE6178-1E16-4002-B859-08A15C5B9AE1}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
