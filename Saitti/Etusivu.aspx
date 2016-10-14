@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <h1>Mikä on sinun suosikki elokuvasi? Kirjaudu sisään ja kerro se!</h1>
+    <h1>Mikä on sinun suosikki pelisi? Kirjaudu sisään ja kerro se!</h1>
         <div id="kirjautuminen">
             <asp:Label Text="Käyttäjänimi" runat="server"/>
             <asp:TextBox ID="Username" runat="server" />
