@@ -4,24 +4,29 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>IIO13200 .NET Ohjelmointi</title>
-    <link href="CSS/demo.css" rel="stylesheet" type="text/css" />
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>IIO13200. NET Ohjelmointi</h1>
-            <h2>1.kontaktikerta</h2>
-            <h2>Testausta, testausta...</h2>
-            <p>
-                Esimerkki ASP.NET DataKontrollista
-                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ShowPhotos.aspx">Show Photos</asp:HyperLink>
-            </p>
-            <p>
-                Esimerkki kuinka koodissa rakennetaan HTML:ää
-                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ShowCustomers.aspx">Show WineCustomers</asp:HyperLink>
-            </p>
+    <div>
+    <h1>Mikä on sinun suosikki pelisi? Kirjaudu sisään ja kerro se!</h1>
+        <div id="kirjautuminen">
+            <asp:Label Text="Käyttäjänimi" runat="server"/>
+            <asp:TextBox ID="Username" runat="server" />
+            <asp:Label Text="Salasana" runat="server"/>
+            <asp:TextBox ID="Password" runat="server" />
+            <asp:Button ID="LahetaKirjautuminen" runat="server" Text="Kirjaudu sisään" OnClick="LahetaKirjautuminen_Click" />
         </div>
+        <div id="UudetTunnukset">
+            <asp:Label Text="Käyttäjänimi" runat="server"/>
+            <asp:TextBox ID="NewUsername" runat="server" />
+            <asp:Label Text="Salasana" runat="server"/>
+            <asp:TextBox ID="NewPassword1" runat="server" />
+            <asp:Label Text="Salasana uudestaan" runat="server"/>
+            <asp:TextBox ID="NewPassword2" runat="server" />
+            <asp:Button ID="TallennaUusi" runat="server" Text="Tallenna käyttäjätunnus" OnClick="TallennaUusi_Click" />
+        </div>
+    </div>
     </form>
 </body>
 </html>
