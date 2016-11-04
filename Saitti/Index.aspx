@@ -6,26 +6,24 @@
 <head runat="server">
     <title>VilliVekarat</title>
 </head>
-<body>
+<body runat="server">
     <form id="form1" runat="server">
     <div>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="CSS" href="styles.css" type="text/css" />
+<link rel="stylesheet" href="CSS/styles.css" type="text/css" runat="server"/>
 
-<img id="image" src="Image/foxmenu_bg-OFF.gif" runat="server" />
+<img id="image" src="Image/placeholder%20melon%208).png" style="width:100px;height:100px;" runat="server"/>
 
-<h1>Horizontal CSS Navigation Menu</h1>
-<hr />
 <div id="foxmenucontainer">
   <div id="foxmenu">
     <ul>
-      <li><a href="http://www.free-css.com/" class="current"><span>CSS Templates</span></a></li>
+      <li><a href="index.aspx" class="current"><span>Etusivu</span></a></li>
       <li><a href="http://www.free-css.com/"><span>CSS Layouts</span></a></li>
       <li><a href="http://www.free-css.com/"><span>CSS Books</span></a></li>
       <li><a href="http://www.free-css.com/"><span>CSS Menus</span></a></li>
       <li><a href="http://www.free-css.com/"><span>CSS Tutorials</span></a></li>
       <li><a href="http://www.free-css.com/"><span>CSS Reference</span></a></li>
-      <li><a rel="nofollow" target="_blank" href="http://www.13styles.com" title="13styles.com"><span>13styles</span></a></li>
+      <li><a href="RSSFeed.aspx"><span>RSS-syöte</span></a></li>
     </ul>
   </div>
 </div>
