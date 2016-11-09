@@ -11,7 +11,7 @@
     <div>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="CSS/styles.css" type="text/css" runat="server"/>
-<asp:LinqDataSource ContextTypeName="" TableName="" Where="" ID="" runat="server" />
+<asp:LinqDataSource ContextTypeName="Users" TableName="UserNames" Where="0" ID="LinqDataSource1" runat="server" />
 <img id="image" src="Image/placeholder%20melon%208).png" style="width:100px;height:100px;" runat="server"/>
 
 <div id="foxmenucontainer">
