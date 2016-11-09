@@ -17,12 +17,9 @@
 <div id="foxmenucontainer">
   <div id="foxmenu">
     <ul>
-      <li><a href="index.aspx" class="current"><span>Etusivu</span></a></li>
-      <li><a href="http://www.free-css.com/"><span>CSS Layouts</span></a></li>
-      <li><a href="http://www.free-css.com/"><span>CSS Books</span></a></li>
-      <li><a href="http://www.free-css.com/"><span>CSS Menus</span></a></li>
-      <li><a href="http://www.free-css.com/"><span>CSS Tutorials</span></a></li>
-      <li><a href="http://www.free-css.com/"><span>CSS Reference</span></a></li>
+      <li><a href="Index.aspx" class="current"><span>Etusivu</span></a></li>
+      <li><a href="Registration.aspx"><span>Kirjaudu sisään</span></a></li>
+      <li><a href="SignIn.aspx"><span>Rekisteröidy</span></a></li>
       <li><a href="RSSFeed.aspx"><span>RSS-syöte</span></a></li>
     </ul>
   </div>

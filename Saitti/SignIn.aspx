@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RSSFeed.aspx.cs" Inherits="RSSFeed" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SignIn.aspx.cs" Inherits="SignIn" %>
 
 <!DOCTYPE html>
 
@@ -24,6 +24,16 @@
     </ul>
   </div>
 </div>
+    <div>
+    <h1>Mik‰ on sinun suosikki pelisi? Kirjaudu sis‰‰n ja kerro se!</h1>
+        <div id="kirjautuminen">
+            <asp:Label Text="K‰ytt‰j‰nimi" runat="server"/>
+            <asp:TextBox ID="Username" runat="server" />
+            <asp:Label Text="Salasana" runat="server"/>
+            <asp:TextBox ID="Password" runat="server" />
+            <asp:Button ID="LahetaKirjautuminen" runat="server" Text="Kirjaudu sis‰‰n" OnClick="LahetaKirjautuminen_Click" />
+        </div>
+    </div>
     </div>
     </form>
 </body>
