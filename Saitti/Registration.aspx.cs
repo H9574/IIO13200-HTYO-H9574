@@ -17,3 +17,28 @@ public partial class Registration : System.Web.UI.Page
 
     }
 }
+
+public class Users
+{
+    string[] _UserNames = { "Ville", "Milla", "Olli" };
+    string[] _UserPass = { "Salasana", "Supersala", "Salsasala" };
+
+    public Users()
+    {
+    }
+
+    public string[] UserNames
+    {
+        get
+        {
+            return _UserNames;
+        }
+    }
+    public string[] UserPass
+    {
+        get
+        {
+            return _UserPass;
+        }
+    }
+}
