@@ -11,4 +11,9 @@ public partial class Registration : System.Web.UI.Page
     {
 
     }
+
+    protected void TallennaUusi_Click(object sender, EventArgs e)
+    {
+
+    }
 }

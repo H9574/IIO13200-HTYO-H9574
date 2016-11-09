@@ -11,4 +11,9 @@ public partial class SignIn : System.Web.UI.Page
     {
 
     }
+
+    protected void LahetaKirjautuminen_Click(object sender, EventArgs e)
+    {
+
+    }
 }

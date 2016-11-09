@@ -25,23 +25,7 @@
   </div>
 </div>
     <div>
-    <h1>Mik‰ on sinun suosikki pelisi? Kirjaudu sis‰‰n ja kerro se!</h1>
-        <div id="kirjautuminen">
-            <asp:Label Text="K‰ytt‰j‰nimi" runat="server"/>
-            <asp:TextBox ID="Username" runat="server" />
-            <asp:Label Text="Salasana" runat="server"/>
-            <asp:TextBox ID="Password" runat="server" />
-            <asp:Button ID="LahetaKirjautuminen" runat="server" Text="Kirjaudu sis‰‰n" OnClick="LahetaKirjautuminen_Click" />
-        </div>
-        <div id="UudetTunnukset">
-            <asp:Label Text="K‰ytt‰j‰nimi" runat="server"/>
-            <asp:TextBox ID="NewUsername" runat="server" />
-            <asp:Label Text="Salasana" runat="server"/>
-            <asp:TextBox ID="NewPassword1" runat="server" />
-            <asp:Label Text="Salasana uudestaan" runat="server"/>
-            <asp:TextBox ID="NewPassword2" runat="server" />
-            <asp:Button ID="TallennaUusi" runat="server" Text="Tallenna k‰ytt‰j‰tunnus" OnClick="TallennaUusi_Click" />
-        </div>
+    <h1>Mahtavat mainostukset sivustamme</h1>
     </div>
     </div>
     </form>
