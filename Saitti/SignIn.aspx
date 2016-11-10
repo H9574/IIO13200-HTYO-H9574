@@ -28,9 +28,9 @@
     <h1>Mik‰ on sinun suosikki pelisi? Kirjaudu sis‰‰n ja kerro se!</h1>
         <div id="kirjautuminen">
             <asp:Label Text="K‰ytt‰j‰nimi" runat="server"/>
-            <asp:TextBox ID="Username" runat="server" />
+            <asp:TextBox ID="txtUsername" runat="server" />
             <asp:Label Text="Salasana" runat="server"/>
-            <asp:TextBox ID="Password" runat="server" />
+            <asp:TextBox ID="txtPassword" runat="server" />
             <asp:Button ID="LahetaKirjautuminen" runat="server" Text="Kirjaudu sis‰‰n" OnClick="LahetaKirjautuminen_Click" />
         </div>
     </div>

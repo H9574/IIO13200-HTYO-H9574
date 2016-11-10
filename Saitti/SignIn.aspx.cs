@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,6 +16,19 @@ public partial class SignIn : System.Web.UI.Page
 
     protected void LahetaKirjautuminen_Click(object sender, EventArgs e)
     {
-
+        SqlConnection con = new SqlConnection("Data Source=NEERAJ-PC;Initial Catalog=CodeSolution;Persist Security Info=True;User ID=sa; password=12345678");
+        con.Open();
+        SqlCommand cmd = new SqlCommand("Select * from login where username='" + txtUsername.Text + "' and pwd ='" + txtPassword.Text + "'", con);
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        if (dt.Rows.Count > 0)
+        {
+            Response.Redirect("UserPage.aspx");
+        }
+        else
+        {
+            Response.Write("<script>alert('Please enter valid Username and Password')</script>");
+        }
     }
 }
