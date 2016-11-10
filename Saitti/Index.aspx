@@ -18,9 +18,10 @@
   <div id="foxmenu">
     <ul>
       <li><a href="Index.aspx" class="current"><span>Etusivu</span></a></li>
-      <li><a href="Registration.aspx"><span>Kirjaudu sisään</span></a></li>
-      <li><a href="SignIn.aspx"><span>Rekisteröidy</span></a></li>
+      <li><a href="Index.aspx"><span>Pelit</span></a></li>
       <li><a href="RSSFeed.aspx"><span>RSS-syöte</span></a></li>
+      <li><a href="SignIn.aspx"><span>Rekisteröidy</span></a></li>
+      <li><a href="Registration.aspx"><span>Kirjaudu sisään</span></a></li>
     </ul>
   </div>
 </div>
