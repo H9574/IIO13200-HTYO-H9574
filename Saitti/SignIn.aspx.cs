@@ -16,7 +16,10 @@ public partial class SignIn : System.Web.UI.Page
 
     protected void LahetaKirjautuminen_Click(object sender, EventArgs e)
     {
-        SqlConnection con = new SqlConnection("Data Source=NEERAJ-PC;Initial Catalog=CodeSolution;Persist Security Info=True;User ID=sa; password=12345678");
+        string connectionInfo = null;
+        //luo tietokanta....
+        connectionInfo = "Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
+        SqlConnection con = new SqlConnection(connectionInfo);
         con.Open();
         SqlCommand cmd = new SqlCommand("Select * from login where username='" + txtUsername.Text + "' and pwd ='" + txtPassword.Text + "'", con);
         SqlDataAdapter da = new SqlDataAdapter(cmd);
