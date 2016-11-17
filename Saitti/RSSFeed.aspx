@@ -25,7 +25,10 @@
   </div>
 </div>
     <div>
-    <h1>Maailmalla tapahtuu...</h1>
+    <h1>IGN:n peliarvostelut</h1>
+    <asp:Button ID="btnGetFeeds" runat="server" Text="Hae YLE uutiset" OnClick="btnGetFeeds_Click" />
+    <asp:XmlDataSource ID="xdsFeedit" XPath="rss/channel/item" runat="server"></asp:XmlDataSource>
+    <asp:Literal id="ltMessages" runat="server" />
     </div>
     </div>
     </form>

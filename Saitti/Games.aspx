@@ -1,7 +1,9 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Games.aspx.cs" Inherits="Games" %>
+<%@ Page Title="Villivekarat" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Games.aspx.cs" Inherits="Games" %>
 
-<!DOCTYPE html>
-
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="Server">
+<!--
 <<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>VilliVekarat</title>
@@ -24,10 +26,9 @@
       <li><a href="Registration.aspx"><span>Kirjaudu sisään</span></a></li>
     </ul>
   </div>
-</div>
+</div> -->
     <div>
     <h1>Kommentteja</h1>
-        <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
             <!-- muokkaa alle oman myslin tiedot, kommentien haku -->
             <asp:SqlDataSource ID ="srcMysli" runat="server"
                 ConnectionString="<%$ ConnectionStrings:Mysli %>"
@@ -45,9 +46,9 @@
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 </Columns>
             </asp:GridView>
-        </asp:Content>
-    </div>
-    </div>
+            </div>
+    <!--</div>
     </form>
 </body>
-</html>
+</html>-->
+</asp:Content>

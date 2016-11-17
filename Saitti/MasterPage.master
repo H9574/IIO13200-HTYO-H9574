@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/styles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <img id="image" src="Image/placeholder%20melon%208).png" style="width:100px;height:100px;" runat="server"/>
+    <div id="foxmenucontainer">
+      <div id="foxmenu">
+        <ul>
+          <li><a href="Index.aspx" class="current"><span>Etusivu</span></a></li>
+          <li><a href="Index.aspx"><span>Pelit</span></a></li>
+          <li><a href="RSSFeed.aspx"><span>RSS-syöte</span></a></li>
+          <li><a href="SignIn.aspx"><span>Rekisteröidy</span></a></li>
+          <li><a href="Registration.aspx"><span>Kirjaudu sisään</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
