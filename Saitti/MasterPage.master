@@ -14,7 +14,7 @@
     <div id="foxmenucontainer">
       <div id="foxmenu">
         <ul>
-          <li><a href="Index.aspx" class="current"><span>Etusivu</span></a></li>
+          <li><a href="Index.aspx"><span>Etusivu</span></a></li>
           <li><a href="Index.aspx"><span>Pelit</span></a></li>
           <li><a href="RSSFeed.aspx"><span>RSS-syöte</span></a></li>
           <li><a href="SignIn.aspx"><span>Rekisteröidy</span></a></li>

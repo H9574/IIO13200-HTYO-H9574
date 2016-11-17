@@ -3,52 +3,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="Server">
-<!--
-<<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>VilliVekarat</title>
-</head>
-<body runat="server">
-    <form id="form1" runat="server">
-    <div>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="CSS/styles.css" type="text/css" runat="server"/>
-
-<img id="image" src="Image/placeholder%20melon%208).png" style="width:100px;height:100px;" runat="server"/>
-
-<div id="foxmenucontainer">
-  <div id="foxmenu">
-    <ul>
-      <li><a href="Index.aspx" class="current"><span>Etusivu</span></a></li>
-      <li><a href="Index.aspx"><span>Pelit</span></a></li>
-      <li><a href="RSSFeed.aspx"><span>RSS-syöte</span></a></li>
-      <li><a href="SignIn.aspx"><span>Rekisteröidy</span></a></li>
-      <li><a href="Registration.aspx"><span>Kirjaudu sisään</span></a></li>
-    </ul>
-  </div>
-</div> -->
-    <div>
     <h1>Kommentteja</h1>
-            <!-- muokkaa alle oman myslin tiedot, kommentien haku -->
-            <asp:SqlDataSource ID ="srcMysli" runat="server"
-                ConnectionString="<%$ ConnectionStrings:Mysli %>"
-                ProviderName="MySql.Data.MySqlClient"
-                SelectCommand="SELECT * FROM Pelaaja"
-                DeleteCommand="DELETE FROM Pelaaja WHERE PelaajaID=@PelaajaID"
-                UpdateCommand="UPDATE Pelaaja 
-                SET Nimi=@Nimi, Seura=@Seura, Pelipaikka=@Pelipaikka, 
-                Nro=@Nro, Maalit=@Maalit, Syotot=@Syotot
-                WHERE (PelaajaID=@PelaajaID)">
-            </asp:SqlDataSource>
-            <h2>Pelaajat Liigassa</h2>
-            <asp:GridView ID="gvPlayers" runat="server" DataSourceID="srcMysli" AllowSorting="True" >
-                <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                </Columns>
-            </asp:GridView>
-            </div>
-    <!--</div>
-    </form>
-</body>
-</html>-->
+    <div class="w3-row">
+        <!-- muokkaa alle oman myslin tiedot, kommentien haku -->
+        <asp:SqlDataSource ID ="srcDataSQL" runat="server"
+            ConnectionString="<%$ ConnectionStrings:DataSQL %>"
+            ProviderName="MySql.Data.MySqlClient"
+            SelectCommand="SELECT * FROM GAME_TBL"
+            DeleteCommand="DELETE FROM GAME_TBL WHERE ID=@ID"
+            UpdateCommand="UPDATE GAME_TBL 
+            SET game=@game, likes_game=@likes_game
+            WHERE (ID=@ID)">
+        </asp:SqlDataSource>
+
+        <h2>Kaikki pelit</h2>
+        <asp:GridView ID="gvGames" runat="server" DataSourceID="srcDataSQL" AllowSorting="True" >
+            <Columns>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+            </Columns>
+        </asp:GridView>
+        </div>
 </asp:Content>
