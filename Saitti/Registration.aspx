@@ -31,9 +31,9 @@
             <asp:Label Text="Käyttäjänimi" runat="server"/>
             <asp:TextBox ID="NewUsername" runat="server" />
             <asp:Label Text="Salasana" runat="server"/>
-            <asp:TextBox ID="NewPassword1" runat="server" />
+            <asp:TextBox ID="NewPassword1" TextMode="Password" runat="server" />
             <asp:Label Text="Salasana uudestaan" runat="server"/>
-            <asp:TextBox ID="NewPassword2" runat="server" />
+            <asp:TextBox ID="NewPassword2" TextMode="Password" runat="server" />
             <asp:Button ID="TallennaUusi" runat="server" Text="Tallenna käyttäjätunnus" OnClick="TallennaUusi_Click" />
         </div>
     </div>

@@ -16,7 +16,7 @@ public partial class Registration : System.Web.UI.Page
 
     protected void TallennaUusi_Click(object sender, EventArgs e)
     {
-        string ignore = "select|from|delete|where";
+        string ignore = "select|from|delete|where|drop"; //oikeuksien vaihtaminen sql kielellä KIELLETTÄVÄ oikeuksien manageriointi
         Regex regex = new Regex(@"^(?!["+ ignore +"])[a-zA-Z0-9]{4,30}$");
         Match matchUser = regex.Match(NewUsername.Text);
         Match matchPass = regex.Match(NewPassword1.Text);
