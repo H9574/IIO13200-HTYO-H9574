@@ -27,6 +27,7 @@
     <div>
     <h1>Mik‰ on sinun suosikki pelisi? Kirjaudu sis‰‰n ja kerro se!</h1>
         <div id="UudetTunnukset">
+            <asp:Label Text="Vaatii v‰hint‰‰n 4 merkin mittaista merkkijonoa. Sallii merkit a-z sek‰ numerot." runat="server"/>
             <asp:Label Text="K‰ytt‰j‰nimi" runat="server"/>
             <asp:TextBox ID="NewUsername" runat="server" />
             <asp:Label Text="Salasana" runat="server"/>
