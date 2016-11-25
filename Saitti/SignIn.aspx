@@ -30,7 +30,7 @@
             <asp:Label Text="Käyttäjänimi" runat="server"/>
             <asp:TextBox ID="txtUsername" runat="server" />
             <asp:Label Text="Salasana" runat="server"/>
-            <asp:TextBox ID="txtPassword" runat="server" />
+            <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" />
             <asp:Button ID="LahetaKirjautuminen" runat="server" Text="Kirjaudu sisään" OnClick="LahetaKirjautuminen_Click" />
         </div>
     </div>
