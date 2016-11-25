@@ -10,14 +10,17 @@ public partial class RSSFeed : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!IsPostBack)
+        {
+            //asetetaan XmlDataSource pointtaamaan Iltasanomien RSS feediin
+            xdsFeedit.DataFile = @"http://feeds.ign.com/ign/game-reviews?format=xml";
+            GetFeeds();
+        }
     }
 
     protected void btnGetFeeds_Click(object sender, EventArgs e)
     {
-        //asetetaan XmlDataSource pointtaamaan Iltasanomien RSS feediin
-        xdsFeedit.DataFile = @"http://feeds.ign.com/ign/game-reviews?format=xml";
-        GetFeeds();
+        // no longer exists. how embarassing
     }
     protected void GetFeeds()
     {
