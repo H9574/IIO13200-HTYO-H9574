@@ -49,9 +49,7 @@ public partial class RSSFeed : System.Web.UI.Page
                 //rsscreator = item["creator"].InnerText;
                 rsslink = item["link"].InnerText;
                 rsstext = item["description"].InnerText;
-                ltMessages.Text += string.Format
-                    //("<h2><a href='{0}'>{1}</a></h2><br>{3} - {2}<br><br>{4}<br><a href='{0}'><b>Read more!</b></a>", rsslink, rsstitle, rssdate, rsscreator, rsstext);
-                    ("<h2><a href='{0}'>{1}</a></h2><br>{2} <a href='{0}'><b>Read more!</b></a>", rsslink, rsstitle, rsstext);
+                ltMessages.Text += string.Format("<div style='font-family:arial;'><h2 style='margin-bottom:2px;'><a href='{0}'>{1}</a></h2><br>{2} <a href='{0}'><b>Read more!</b></a></div><br>", rsslink, rsstitle, rsstext);
             }
 
         }
