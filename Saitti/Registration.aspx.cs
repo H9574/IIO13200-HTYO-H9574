@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
+using System.Data;
 
 public partial class Registration : System.Web.UI.Page
 {
@@ -25,6 +27,11 @@ public partial class Registration : System.Web.UI.Page
             if (NewPassword1.Text == NewPassword2.Text)
             {
                 MyMessage = "Uutta käyttäjätunnusta luodaan";
+                string queryString = "UPDATE GAME_TBL SET game = @game, likes_game = @likes_game WHERE(ID = @ID); UPDATE GAME_TBL SET game = @game, likes_game = @likes_game WHERE(ID = @ID)";
+                string connectionString = "<%$ ConnectionStrings:DataSQL %>";
+                CreateCommand(queryString, connectionString);
+                //uudelleen ohjaus
+                Response.Redirect("~/UserPage.aspx");
             }
             else
             {
@@ -36,6 +43,17 @@ public partial class Registration : System.Web.UI.Page
             MyMessage = "Kentät sisältävät kiellettyjä merkkejä";
         }
         ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('"+MyMessage+"');", true);
+    }
+
+    private static void CreateCommand(string queryString, string connectionString)
+    {
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            SqlCommand command = new SqlCommand(queryString, connection);
+            command.Connection.Open();
+            command.ExecuteNonQuery();
+            command.Connection.Close();
+        }
     }
 }
 

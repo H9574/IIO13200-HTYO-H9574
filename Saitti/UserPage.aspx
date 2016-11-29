@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
-    <form id="form1" runat="server">
     <div id="nappulat">
         <asp:Button ID="btnHae" runat="server" Text="Hae kommentit" OnClick="btnHae_Click" />
     </div>
@@ -13,6 +12,5 @@
     <div id="footer">
         <asp:Label ID="lblMessage" runat="server" Text="..."></asp:Label>
     </div>
-    </form>
 </asp:Content>
 

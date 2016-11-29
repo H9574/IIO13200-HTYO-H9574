@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
+    <asp:SqlDataSource ID ="srcDataSQL" runat="server" ConnectionString="<%$ ConnectionStrings:DataSQL %>" ProviderName="MySql.Data.MySqlClient" />
     <asp:LinqDataSource ContextTypeName="Users" TableName="UserNames" Where="0" ID="LinqDataSource1" runat="server" />
     <h1>Mikä on sinun suosikki pelisi? Kirjaudu sisään ja kerro se!</h1>
         <div id="UudetTunnukset">
