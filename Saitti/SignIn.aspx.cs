@@ -25,7 +25,7 @@ public partial class SignIn : System.Web.UI.Page
         connectionInfo = "Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
         SqlConnection con = new SqlConnection(connectionInfo);
         con.Open();
-        SqlCommand cmd = new SqlCommand("Select pass_fk from login where username='" + txtUsername.Text + "' and pwd ='" + txtPassword.Text + "'", con);
+        SqlCommand cmd = new SqlCommand("Select * from login where username='" + txtUsername.Text + "' and pwd ='" + txtPassword.Text + "'", con);
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         DataTable dt = new DataTable();
         da.Fill(dt);
