@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 using System.Data;
 
 public partial class Registration : System.Web.UI.Page
@@ -18,20 +20,30 @@ public partial class Registration : System.Web.UI.Page
 
     protected void TallennaUusi_Click(object sender, EventArgs e)
     {
-        string ignore = "select|from|delete|where|drop"; //oikeuksien vaihtaminen sql kielellä KIELLETTÄVÄ oikeuksien manageriointi
-        Regex regex = new Regex(@"^(?!["+ ignore +"])[a-zA-Z0-9]{4,30}$");
-        Match matchUser = regex.Match(NewUsername.Text);
-        Match matchPass = regex.Match(NewPassword1.Text);
-        if (matchUser.Success && matchPass.Success)
+        //Suoritetaan regularexpression tarkistus
+        if (RegexpCheck(NewUsername.Text, NewPassword1.Text))
         {
             if (NewPassword1.Text == NewPassword2.Text)
             {
                 MyMessage = "Uutta käyttäjätunnusta luodaan";
-                string queryString = "UPDATE GAME_TBL SET game = @game, likes_game = @likes_game WHERE(ID = @ID); UPDATE GAME_TBL SET game = @game, likes_game = @likes_game WHERE(ID = @ID)";
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + MyMessage + "');", true);
+
+                //viedään tietokantaan eka salasana
                 string connectionString = "<%$ ConnectionStrings:DataSQL %>";
-                CreateCommand(queryString, connectionString);
+
+                //salasanan salaus md5
+                MD5 md5Hash = MD5.Create();
+                string Hash_Pass = GetMd5Hash(md5Hash, NewPassword1.Text);
+                string queryStringPass = "INSERT INTO PASS_TBL (Pass) VALUES(" + Hash_Pass + ")";
+                CreateCommand(queryStringPass, connectionString);
+
+                //käydään tarkistamassa salasanan ID ja annetaan se käyttäjä tauluun
+                string queryCheckPass = "SELECT * FROM PASS_TBL WHERE Pass = '" + Hash_Pass + "'";
+                string Pass_id = Convert.ToString(CheckCommand(queryCheckPass, connectionString));
+                string queryStringUser = "INSERT INTO USER_TBL(name, pass_fk) VALUES(" + NewUsername.Text + ", " + Pass_id + ")";
+
                 //uudelleen ohjaus
-                Response.Redirect("~/UserPage.aspx");
+                Response.Redirect("UserPage.aspx");
             }
             else
             {
@@ -44,7 +56,36 @@ public partial class Registration : System.Web.UI.Page
         }
         ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('"+MyMessage+"');", true);
     }
-
+    //regexp tarkistus syötetyille tiedoille
+    static bool RegexpCheck(string user, string pass)
+    {
+        string ignore = "select|from|delete|where|drop"; //oikeuksien vaihtaminen sql kielellä KIELLETTÄVÄ oikeuksien manageriointi
+        Regex regex = new Regex(@"^(?![" + ignore + "])[a-zA-Z0-9]{4,30}$");
+        Match matchUser = regex.Match(user);
+        Match matchPass = regex.Match(pass);
+        if (matchUser.Success && matchPass.Success)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    //haetaan tietoa taulusta
+    private static string CheckCommand(string queryString, string connectionString)
+    {
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            SqlCommand command = new SqlCommand(queryString, connection);
+            command.Connection.Open();
+            //command.ExecuteNonQuery();
+            string data = Convert.ToString(command.ExecuteScalar());
+            command.Connection.Close();
+            return data;
+        }
+    }
+    //luodaan uusia rivejä tauluun
     private static void CreateCommand(string queryString, string connectionString)
     {
         using (SqlConnection connection = new SqlConnection(connectionString))
@@ -55,29 +96,16 @@ public partial class Registration : System.Web.UI.Page
             command.Connection.Close();
         }
     }
-}
-
-public class Users
-{
-    string[] _UserNames = { "Ville", "Milla", "Olli" };
-    string[] _UserPass = { "Salasana", "Supersala", "Salsasala" };
-
-    public Users()
+    //md5 laskeminen string muotoisesta muuttujasta, ei suolausta
+    static string GetMd5Hash(MD5 md5Hash, string input)
     {
-    }
-
-    public string[] UserNames
-    {
-        get
+        //muutetaan toiseen muotoon ja käydään muuntamassa jokainen merkki yksi kerrallaan kunnes salasana on salattu
+        byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+        StringBuilder sBuilder = new StringBuilder();
+        for (int i = 0; i < data.Length; i++)
         {
-            return _UserNames;
+            sBuilder.Append(data[i].ToString("x2"));
         }
-    }
-    public string[] UserPass
-    {
-        get
-        {
-            return _UserPass;
-        }
+        return sBuilder.ToString();
     }
 }
