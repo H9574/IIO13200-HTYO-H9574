@@ -1,35 +1,9 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RSSFeed.aspx.cs" Inherits="RSSFeed" %>
+<%@ Page Title="Villivekarat" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="RSSFeed.aspx.cs" Inherits="RSSFeed" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>VilliVekarat</title>
-</head>
-<body runat="server">
-    <form id="form1" runat="server">
-        <div>
-            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-            <link rel="stylesheet" href="CSS/styles.css" type="text/css" runat="server"/>
-
-            <img id="image" src="Image/placeholder%20melon%208).png" style="width:100px;height:100px;" runat="server"/>
-
-            <div id="foxmenucontainer">
-              <div id="foxmenu">
-                <ul>
-                  <li><a href="Index.aspx" class="current"><span>Etusivu</span></a></li>
-                  <li><a href="Registration.aspx"><span>Kirjaudu sisään</span></a></li>
-                  <li><a href="SignIn.aspx"><span>Rekisteröidy</span></a></li>
-                  <li><a href="RSSFeed.aspx"><span>RSS-syöte</span></a></li>
-                </ul>
-              </div>
-            </div>
-            <div>
-                <h1>IGN:n peliarvostelut</h1>
-                <asp:XmlDataSource ID="xdsFeedit" XPath="rss/channel/item" runat="server"></asp:XmlDataSource>
-                <asp:Literal id="ltMessages" runat="server" />
-            </div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
+    <h1>IGN:n peliarvostelut</h1>
+        <asp:XmlDataSource ID="xdsFeedit" XPath="rss/channel/item" runat="server"></asp:XmlDataSource>
+        <asp:Literal id="ltMessages" runat="server" />
+</asp:Content>

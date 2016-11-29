@@ -1,12 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserPage.aspx.cs" Inherits="UserPage" %>
+﻿<%@ Page Title="Villivekarat" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="UserPage.aspx.cs" Inherits="UserPage" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <form id="form1" runat="server">
     <div id="nappulat">
         <asp:Button ID="btnHae" runat="server" Text="Hae kommentit" OnClick="btnHae_Click" />
@@ -18,5 +14,5 @@
         <asp:Label ID="lblMessage" runat="server" Text="..."></asp:Label>
     </div>
     </form>
-</body>
-</html>
+</asp:Content>
+
