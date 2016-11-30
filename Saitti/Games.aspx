@@ -5,7 +5,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="Server">
     <h1>Kommentteja</h1>
     <div class="w3-row">
-        <!-- muokkaa alle oman myslin tiedot, kommentien haku -->
+        <!-- pelien haku -->
         <asp:SqlDataSource ID ="srcDataSQL" runat="server"
             ConnectionString="<%$ ConnectionStrings:DataSQL %>"
             ProviderName="MySql.Data.MySqlClient"
