@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Data;
+using System.Configuration;
 
 public partial class Registration : System.Web.UI.Page
 {
@@ -29,7 +30,10 @@ public partial class Registration : System.Web.UI.Page
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + MyMessage + "');", true);
 
                 //viedään tietokantaan eka salasana
-                string connectionString = "<%$ ConnectionStrings:DataSQL %>";
+                //string connectionString = "<%$ ConnectionStrings:DataSQL %>";
+                //ID ="srcDataSQL" runat="server" ConnectionString="<%$ ConnectionStrings:DataSQL %>" ProviderName="MySql.Data.MySqlClient" 
+                //string connectionString = "Data Source=ServerName;" + "Initial Catalog=DataBaseName;" + "User id=UserName;" + "Password=Secret;";
+                string connectionString = "ConfigurationManager.ConnectionStrings["+'\u0022'+"DataSQL" + '\u0022' + "].ToString()";
 
                 //salasanan salaus md5
                 MD5 md5Hash = MD5.Create();
@@ -88,7 +92,8 @@ public partial class Registration : System.Web.UI.Page
     //luodaan uusia rivejä tauluun
     private static void CreateCommand(string queryString, string connectionString)
     {
-        using (SqlConnection connection = new SqlConnection(connectionString))
+        //tämä rivi korjattavana
+        using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DataSQL"].ToString()))
         {
             SqlCommand command = new SqlCommand(queryString, connection);
             command.Connection.Open();
