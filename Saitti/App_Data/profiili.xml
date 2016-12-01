@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<user>
+	<personal>
+		<name></name>
+		<age></age>
+		<nationality></nationality>
+	</personal>
+	<favegame></favegame>
+	<favechar></favechar>
+	<quote></quote>
+	<biography></biography>
+</user>
