@@ -93,7 +93,7 @@ public partial class Registration : System.Web.UI.Page
     private static void CreateCommand(string queryString, string connectionString)
     {
         //tämä rivi korjattavana
-        using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DataSQL"].ToString()))
+        using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString()))
         {
             SqlCommand command = new SqlCommand(queryString, connection);
             command.Connection.Open();
