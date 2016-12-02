@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <user>
 	<personal>
-		<name></name>
-		<age></age>
-		<nationality></nationality>
+		<fname>ville</fname>
+    <lname>viisvee</lname>
+		<age>5</age>
+		<location>suomi</location>
 	</personal>
-	<favegame></favegame>
-	<favechar></favechar>
-	<quote></quote>
-	<biography></biography>
+	<favegame>mario</favegame>
+	<favechar>sonic</favechar>
+	<quote>i never asked for this</quote>
+	<biography>mlp is gud</biography>
 </user>

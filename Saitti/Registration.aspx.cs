@@ -10,6 +10,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Data;
 using System.Configuration;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 public partial class Registration : System.Web.UI.Page
 {
@@ -33,18 +35,20 @@ public partial class Registration : System.Web.UI.Page
                 //string connectionString = "<%$ ConnectionStrings:DataSQL %>";
                 //ID ="srcDataSQL" runat="server" ConnectionString="<%$ ConnectionStrings:DataSQL %>" ProviderName="MySql.Data.MySqlClient" 
                 //string connectionString = "Data Source=ServerName;" + "Initial Catalog=DataBaseName;" + "User id=UserName;" + "Password=Secret;";
-                string connectionString = "ConfigurationManager.ConnectionStrings["+'\u0022'+"DataSQL" + '\u0022' + "].ToString()";
+                //string connectionString = "ConfigurationManager.ConnectionStrings["+'\u0022'+"DataSQL" + '\u0022' + "].ToString()";
+                string connectionString = ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString();
 
                 //salasanan salaus md5
                 MD5 md5Hash = MD5.Create();
                 string Hash_Pass = GetMd5Hash(md5Hash, NewPassword1.Text);
-                string queryStringPass = "INSERT INTO PASS_TBL (Pass) VALUES(" + Hash_Pass + ")";
+                string queryStringPass = "INSERT INTO PASS_TBL (Pass) VALUES('" + Hash_Pass + "')";
                 CreateCommand(queryStringPass, connectionString);
 
                 //käydään tarkistamassa salasanan ID ja annetaan se käyttäjä tauluun
                 string queryCheckPass = "SELECT * FROM PASS_TBL WHERE Pass = '" + Hash_Pass + "'";
                 string Pass_id = Convert.ToString(CheckCommand(queryCheckPass, connectionString));
-                string queryStringUser = "INSERT INTO USER_TBL(name, pass_fk) VALUES(" + NewUsername.Text + ", " + Pass_id + ")";
+                string queryStringUser = "INSERT INTO USER_TBL(name, pass_fk) VALUES('" + NewUsername.Text + "', " + Pass_id + ")";
+                CreateCommand(queryStringUser, connectionString);
 
                 //uudelleen ohjaus
                 Response.Redirect("UserPage.aspx");
@@ -79,9 +83,9 @@ public partial class Registration : System.Web.UI.Page
     //haetaan tietoa taulusta
     private static string CheckCommand(string queryString, string connectionString)
     {
-        using (SqlConnection connection = new SqlConnection(connectionString))
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
         {
-            SqlCommand command = new SqlCommand(queryString, connection);
+            MySqlCommand command = new MySqlCommand(queryString, connection);
             command.Connection.Open();
             //command.ExecuteNonQuery();
             string data = Convert.ToString(command.ExecuteScalar());
@@ -93,9 +97,9 @@ public partial class Registration : System.Web.UI.Page
     private static void CreateCommand(string queryString, string connectionString)
     {
         //tämä rivi korjattavana
-        using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString()))
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
         {
-            SqlCommand command = new SqlCommand(queryString, connection);
+            MySqlCommand command = new MySqlCommand(queryString, connection);
             command.Connection.Open();
             command.ExecuteNonQuery();
             command.Connection.Close();

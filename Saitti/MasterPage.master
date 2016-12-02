@@ -10,7 +10,7 @@
     <link href="CSS/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <img id="image" src="Image/placeholder%20melon%208).png" style="width:100px;height:100px;" runat="server"/>
+    <img id="image" src="Image/villivekara.png" style="width:100px;height:100px;" runat="server"/>
     <div id="foxmenucontainer">
       <div id="foxmenu">
         <ul>

@@ -12,18 +12,19 @@
             <asp:Image ID="imgAvatar" runat="server" />
         </div>
         <div>
-            <h1><asp:Label ID="lblName" runat="server" Text="Tonttu Torvinen"></asp:Label></h1>
-        </div>
-        <div>
-            <asp:Label ID="lblAge" runat="server" Text="99 v"></asp:Label>
-            <asp:Label ID="lblNationality" runat="server" Text="Korvatunturi"></asp:Label>
+            <div>
+                <h1><asp:Label ID="lblName" runat="server" Text="Tonttu Torvinen"></asp:Label></h1>
+            </div>
+            <div>
+                <asp:Label ID="lblAgeloc" runat="server" Text="99 v, korvatunturi"></asp:Label>
+            </div>
         </div>
         <div>
             <asp:Label ID="lblBio" runat="server" Text="onkos täällä kilttejä lapsia :)"></asp:Label>
         </div>
     </div>
     <div id="footer">
-        <asp:Label ID="lblMessage" runat="server" Text="..."></asp:Label>
+        <asp:Label ID="lblMessage" runat="server" Text=" "></asp:Label>
     </div>
 </asp:Content>
 

@@ -9,6 +9,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
 
 public partial class SignIn : System.Web.UI.Page
 {
@@ -40,7 +44,7 @@ public partial class SignIn : System.Web.UI.Page
         if(RegexpCheck(txtUsername.Text, txtPassword.Text))
         {
             MD5 md5Hash = MD5.Create();
-            string connectionString = "<%$ ConnectionStrings:DataSQL %>";
+            string connectionString = ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString();
             string queryCheckUser = "SELECT * FROM USER_TBL WHERE name = '" + txtUsername.Text + "'";
             //eka etsitään käyttäjä ja taulun numero, exception jos käyttäjää ei olekaan
             string hashed_pass_number = CheckCommand(queryCheckUser, connectionString);
@@ -115,12 +119,12 @@ public partial class SignIn : System.Web.UI.Page
     //haetaan tietoa taulusta
     private static string CheckCommand(string queryString, string connectionString)
     {
-        using (SqlConnection connection = new SqlConnection(connectionString))
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
         {
-            SqlCommand command = new SqlCommand(queryString, connection);
+            MySqlCommand command = new MySqlCommand(queryString, connection);
             command.Connection.Open();
             //command.ExecuteNonQuery();
-            string data = Convert.ToString(command.ExecuteScalar());
+            string data = Convert.ToString(command.ExecuteNonQuery()/*command.ExecuteScalar()*/);
             command.Connection.Close();
             return data;
         }
