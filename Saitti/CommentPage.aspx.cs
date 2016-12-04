@@ -9,6 +9,9 @@ public partial class CommentPage : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!Request.IsAuthenticated)
+        {
+            Response.Redirect("SignIn.aspx");
+        }
     }
 }

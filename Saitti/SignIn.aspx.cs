@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-
+using System.Web.Security;
 
 public partial class SignIn : System.Web.UI.Page
 {
@@ -56,6 +56,11 @@ public partial class SignIn : System.Web.UI.Page
             {
                 MyMessage = "Kirjautuminen onnistui";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + MyMessage + "');", true);
+                
+                //Jonkin alla olevista pitäisi saada authenticoitua käyttäjä
+                FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, NotPublicCheckBox.Checked);
+                FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, true);
+
                 //uudelleen ohjaus
                 Response.Redirect("UserPage.aspx");
             }

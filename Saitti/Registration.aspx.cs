@@ -51,7 +51,7 @@ public partial class Registration : System.Web.UI.Page
                 CreateCommand(queryStringUser, connectionString);
 
                 //uudelleen ohjaus
-                Response.Redirect("UserPage.aspx");
+                Response.Redirect("SignIn.aspx");
             }
             else
             {
