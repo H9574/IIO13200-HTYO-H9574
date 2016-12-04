@@ -46,8 +46,10 @@ public partial class SignIn : System.Web.UI.Page
             MD5 md5Hash = MD5.Create();
             string connectionString = ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString();
             string queryCheckUser = "SELECT * FROM USER_TBL WHERE name = '" + txtUsername.Text + "'";
+            
             //eka etsitään käyttäjä ja taulun numero, exception jos käyttäjää ei olekaan
             string hashed_pass_number = CheckCommand(queryCheckUser, connectionString);
+            
             //seuraavaksi haetaan itse salasana
             string queryCheckPass = "SELECT Pass FROM PASS_TBL WHERE ID = " + hashed_pass_number;
             string hashed_pass = CheckCommand(queryCheckPass, connectionString);
@@ -60,6 +62,11 @@ public partial class SignIn : System.Web.UI.Page
                 //Jonkin alla olevista pitäisi saada authenticoitua käyttäjä
                 FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, NotPublicCheckBox.Checked);
                 FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, true);
+
+                //session muuttujiin käyttäjän numero taulusta, jotta löydämme oikeat kommentit
+                string queryCheckUserNumber = "SELECT ID FROM USER_TBL WHERE name = '" + txtUsername.Text + "'";
+                string user_FK = CheckCommand(queryCheckUserNumber, connectionString);
+                Session["UserNumber"] = user_FK;
 
                 //uudelleen ohjaus
                 Response.Redirect("UserPage.aspx");

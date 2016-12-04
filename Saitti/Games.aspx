@@ -12,7 +12,7 @@
             SelectCommand="SELECT * FROM GAME_TBL"
             DeleteCommand="DELETE FROM GAME_TBL WHERE ID=@ID"
             UpdateCommand="UPDATE GAME_TBL 
-            SET game=@game, likes_game=@likes_game
+            SET game=@game, likes=@likes_game
             WHERE (ID=@ID)">
         </asp:SqlDataSource>
 
