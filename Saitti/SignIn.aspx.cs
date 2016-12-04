@@ -58,8 +58,9 @@ public partial class SignIn : System.Web.UI.Page
             {
                 MyMessage = "Kirjautuminen onnistui";
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + MyMessage + "');", true);
-                
+
                 //Jonkin alla olevista pitäisi saada authenticoitua käyttäjä
+                FormsAuthentication.Authenticate(txtUsername.Text, txtPassword.Text);
                 FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, NotPublicCheckBox.Checked);
                 FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, true);
 
@@ -81,6 +82,12 @@ public partial class SignIn : System.Web.UI.Page
             MyMessage = "Kentät sisältävät vahingollista tietoa";
         }
         ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + MyMessage + "');", true);
+    }
+    
+    protected void KirjauduUlos_Click(object sender, EventArgs e)
+    {
+        FormsAuthentication.SignOut();
+        Response.Redirect("Index.aspx");
     }
     //md5 laskeminen string muotoisesta muuttujasta
     static string GetMd5Hash(MD5 md5Hash, string input)
