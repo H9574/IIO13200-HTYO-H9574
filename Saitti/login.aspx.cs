@@ -1,6 +1,4 @@
-﻿//<!-- user:SilliSipuli pass:Kettunen, user:PikkuPeruna pass:Mutainen -->
-
-using System;
+﻿using System;
 using System.Data.SqlClient;
 using System.Data;
 using System.Text.RegularExpressions;
@@ -17,7 +15,7 @@ using MySql.Data.MySqlClient;
 using System.Web.Security;
 using System.IO;
 
-public partial class SignIn : System.Web.UI.Page
+public partial class login : System.Web.UI.Page
 {
     String MyMessage;
     protected void Page_Load(object sender, EventArgs e)
@@ -59,18 +57,18 @@ public partial class SignIn : System.Web.UI.Page
         //{
         //    Response.Write("<script>alert('Please enter valid Username and Password')</script>");
         //}
-        if(RegexpCheck(txtUsername.Text, txtPassword.Text))
+        if (RegexpCheck(txtUsername.Text, txtPassword.Text))
         {
             MD5 md5Hash = MD5.Create();
             string connectionString = ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString();
             string queryCheckUser = "SELECT * FROM USER_TBL WHERE name = '" + txtUsername.Text + "'";
-            
+
             //eka etsitään käyttäjä ja taulun numero, exception jos käyttäjää ei olekaan
-            string hashed_pass_number = CheckCommand(queryCheckUser, connectionString,2);
+            string hashed_pass_number = CheckCommand(queryCheckUser, connectionString, 2);
 
             //seuraavaksi haetaan itse salasana
             string queryCheckPass = "SELECT * FROM PASS_TBL WHERE ID = " + hashed_pass_number;
-            string hashed_pass = CheckCommand(queryCheckPass, connectionString,1);
+            string hashed_pass = CheckCommand(queryCheckPass, connectionString, 1);
 
             if (VerifyMd5Hash(md5Hash, txtPassword.Text, hashed_pass))
             {
@@ -79,7 +77,7 @@ public partial class SignIn : System.Web.UI.Page
 
                 //session muuttujiin käyttäjän numero taulusta, jotta löydämme oikeat kommentit
                 string queryCheckUserNumber = "SELECT * FROM USER_TBL WHERE name = '" + txtUsername.Text + "'";
-                string user_FK = CheckCommand(queryCheckUserNumber, connectionString,0);
+                string user_FK = CheckCommand(queryCheckUserNumber, connectionString, 0);
                 Session["UserNumber"] = user_FK;
 
                 //Pitäisi authenticoida käyttäjä!!!!
@@ -105,7 +103,7 @@ public partial class SignIn : System.Web.UI.Page
         }
         ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + MyMessage + "');", true);
     }
-    
+
     protected void KirjauduUlos_Click(object sender, EventArgs e)
     {
         FormsAuthentication.SignOut();

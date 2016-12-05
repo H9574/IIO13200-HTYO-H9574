@@ -19,7 +19,7 @@
         <h2>Kaikki pelit</h2>
         <asp:GridView ID="gvGames" runat="server" DataSourceID="srcDataSQL" AllowSorting="True" >
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                
             </Columns>
         </asp:GridView>
         </div>

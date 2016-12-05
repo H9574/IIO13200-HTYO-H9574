@@ -16,7 +16,7 @@ public partial class UserPage : System.Web.UI.Page
         //luetaan web.configista xml-tiedoston nimi
         xmlfilu = ConfigurationManager.AppSettings["tiedosto"];
         //lblMessage.Text = xmlfilu;
-        if (!Request.IsAuthenticated)
+        if (!User.Identity.IsAuthenticated)
         {
             Response.Redirect("SignIn.aspx");
         }

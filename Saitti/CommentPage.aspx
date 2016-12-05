@@ -14,8 +14,7 @@
             SelectCommand="SELECT GAME_TBL.game, COMMENT_TBL.user_comment 
             FROM COMMENT_TBL
             INNER JOIN GAME_TBL
-            ON COMMENT_TBL.game_fk=GAME_TBL.ID
-            WHERE (user_fk=@user_FK)"
+            ON COMMENT_TBL.game_fk=GAME_TBL.ID"
             DeleteCommand="DELETE FROM COMMENT_TBL WHERE ID=@ID"
             UpdateCommand="UPDATE COMMENT_TBL 
             SET user_comment=@user_comment
