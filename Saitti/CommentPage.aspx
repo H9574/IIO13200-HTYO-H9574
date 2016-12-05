@@ -3,14 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
-    <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="Server">
     <h1>Kommenttisi</h1>
     <div class="w3-row">
         <!-- KOMMENTTIEN haku -->
-        <script runat="server">
-            var user_FK = e.object.text;
-            Session["UserNumber"] = user_FK;
-        </script>
+
+
         <asp:SqlDataSource ID ="srcDataSQL" runat="server"
             ConnectionString="<%$ ConnectionStrings:DataSQL %>"
             ProviderName="MySql.Data.MySqlClient"

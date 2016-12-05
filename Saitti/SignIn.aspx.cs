@@ -19,7 +19,16 @@ public partial class SignIn : System.Web.UI.Page
     String MyMessage;
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (!Request.IsAuthenticated)
+        {
+            string Teksti = "< h1 > Mikä on sinun suosikki pelisi? Kirjaudu sisään ja kerro se!</ h1 >< div id = 'kirjautuminen' >< asp:Label Text = 'Käyttäjänimi' runat = 'server' />< asp:TextBox ID = 'txtUsername' runat = 'server' />< asp:Label Text = 'Salasana' runat = 'server' />< asp:TextBox ID = 'txtPassword' TextMode = 'Password' runat = 'server' />< asp:Button ID = 'LahetaKirjautuminen' runat = 'server' Text = 'Kirjaudu sisään' OnClick = 'LahetaKirjautuminen_Click' /></ div >";
+            testilbl.Text = Teksti;
+        }
+        else
+        {
+            string Teksti = "< h1 > Aika lähteä? Tule pian uudestaan</ h1 >< div id = 'ulos' >< asp:Button ID = 'KirjauduUlos' runat = 'server' Text = 'Kirjaudu ulos' OnClick = 'KirjauduUlos_Click' /></ div >";
+            testilbl.Text = Teksti;
+        }
     }
 
     protected void LahetaKirjautuminen_Click(object sender, EventArgs e)
@@ -40,7 +49,7 @@ public partial class SignIn : System.Web.UI.Page
         else
         {
             Response.Write("<script>alert('Please enter valid Username and Password')</script>");
-        }*/
+        }
         if(RegexpCheck(txtUsername.Text, txtPassword.Text))
         {
             MD5 md5Hash = MD5.Create();
@@ -143,9 +152,9 @@ public partial class SignIn : System.Web.UI.Page
             MySqlCommand command = new MySqlCommand(queryString, connection);
             command.Connection.Open();
             //command.ExecuteNonQuery();
-            string data = Convert.ToString(command.ExecuteNonQuery()/*command.ExecuteScalar()*/);
+            string data = Convert.ToString(command.ExecuteNonQuery());
             command.Connection.Close();
             return data;
-        }
+        }*/
     }
 }

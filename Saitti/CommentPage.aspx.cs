@@ -13,5 +13,15 @@ public partial class CommentPage : System.Web.UI.Page
         {
             Response.Redirect("SignIn.aspx");
         }
+        else
+        {
+            /*
+            <script type="text/javascript" src="SessionScript.js" runat="server"\>
+            Javascript SessionScript.js
+            var user_FK = e.object.text;
+            Session["UserNumber"] = user_FK;
+            */
+            string user_FK = (string)(Session["UserNumber"]);
+        }
     }
 }
