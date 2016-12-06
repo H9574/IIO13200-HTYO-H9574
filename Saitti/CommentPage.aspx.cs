@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using System.Data;
 
 public partial class CommentPage : System.Web.UI.Page
 {
@@ -33,10 +34,12 @@ public partial class CommentPage : System.Web.UI.Page
         string connectionString = ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString();
         string comment = Kommentti.Text;
         string user_FK = (string)(Session["UserNumber"]);
-        string queryString = "INSERT INTO COMMENT_TBL (comment,user_fk) VALUES('" + comment + "','"+ user_FK + "')";
+        string game_FK = PelinValinta.SelectedValue;
+        string queryString = "INSERT INTO COMMENT_TBL (user_fk,game_fk,user_comment) VALUES(" + user_FK + "," + game_FK + ",'" + comment + "')";
         CreateCommand(queryString, connectionString);
         Response.Redirect(Request.RawUrl);
     }
+
     private void populateDropDown()
     {
         DataTable subjects = new DataTable();
@@ -56,7 +59,7 @@ public partial class CommentPage : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                // Handle the error
+                // error tänne
             }
 
         }
