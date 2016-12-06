@@ -25,7 +25,7 @@
         <asp:DropDownList ID="PelinValinta" AutoPostBack="true" runat="server">
             <asp:ListItem Text="<Select Subject>" Value="0" />
         </asp:DropDownList>
-        <asp:Textbox ID="Kommentti" runat="server"></asp:Textbox>
+        <asp:Textbox ID="Kommentti" style="Z-INDEX: 101; LEFT: 56px; OVERFLOW: hidden; POSITION: absolute; TOP: 72px" runat="server" TextMode="MultiLine"></asp:Textbox>
         <asp:Button ID="UusiKommentti" runat="server" Text="Jukaise uusi kommentti" OnClick="UusiKommentti_Click" />
 
         <h2>Kaikki kirjoittamasi kommentit</h2>

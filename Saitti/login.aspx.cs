@@ -25,12 +25,14 @@ public partial class login : System.Web.UI.Page
             Otsikkolbl.Text = "Mikä on sinun suosikki pelisi? Kirjaudu sisään ja kerro se!";
             Userlbl.Text = "Käyttäjätunnus:";
             Passlbl.Text = "Salasana:";
-            Button.Text = "Kirjaudu sisään";
+            Nappula.Text = "Kirjaudu sisään";
+            Nappula.OnClick = "LahetaKirjautuminen_Click";
         }
         else
         {
             Otsikkolbl.Text = "Aika lähteä? Tule pian uudestaan";
-            Button.Text = "Kirjaudu ulos";
+            Nappula.Text = "Kirjaudu ulos";
+            Nappula.OnClick = "KirjauduUlos_Click";
         }
     }
 

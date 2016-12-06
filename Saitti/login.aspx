@@ -23,8 +23,9 @@
             <asp:CheckBox id="chkPersistCookie" runat="server" autopostback="false" />
         </ul>
         <ul>
-        <asp:Button ID = 'Button' runat = 'server' OnClick = 'LahetaKirjautuminen_Click' />
+        <asp:Button ID = 'Nappula' runat = 'server' />
         </ul>
+
     </asp:Table>
 </asp:Content>
 
