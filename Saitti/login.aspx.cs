@@ -22,41 +22,20 @@ public partial class login : System.Web.UI.Page
     {
         if (!Request.IsAuthenticated)
         {
-            //string Teksti = "< h1 > Mikä on sinun suosikki pelisi? Kirjaudu sisään ja kerro se!</ h1 >< div id = 'kirjautuminen' >< asp:Label Text = 'Käyttäjänimi' runat = 'server' />< asp:TextBox ID = 'txtUsername' runat = 'server' />< asp:Label Text = 'Salasana' runat = 'server' />< asp:TextBox ID = 'txtPassword' TextMode = 'Password' runat = 'server' />< asp:Button ID = 'LahetaKirjautuminen' runat = 'server' Text = 'Kirjaudu sisään' OnClick = 'LahetaKirjautuminen_Click' /></ div >";
             Otsikkolbl.Text = "Mikä on sinun suosikki pelisi? Kirjaudu sisään ja kerro se!";
             Userlbl.Text = "Käyttäjätunnus:";
             Passlbl.Text = "Salasana:";
-            //< asp:Button ID = 'LahetaKirjautuminen' runat = 'server' Text = 'Kirjaudu sisään' OnClick = 'LahetaKirjautuminen_Click' />
             Button.Text = "Kirjaudu sisään";
         }
         else
         {
-            //string Teksti = "< h1 > Aika lähteä? Tule pian uudestaan</ h1 >< div id = 'ulos' >< asp:Button ID = 'KirjauduUlos' runat = 'server' Text = 'Kirjaudu ulos' OnClick = 'KirjauduUlos_Click' /></ div >";
             Otsikkolbl.Text = "Aika lähteä? Tule pian uudestaan";
-            //< asp:Button ID = 'KirjauduUlos' runat = 'server' Text = 'Kirjaudu ulos' OnClick = 'KirjauduUlos_Click' />
             Button.Text = "Kirjaudu ulos";
         }
     }
 
     protected void LahetaKirjautuminen_Click(object sender, EventArgs e)
     {
-        //string connectionInfo = null;
-        //luo tietokanta....
-        //connectionInfo = "Data Source=ServerName;Initial Catalog=DatabaseName;User ID=UserName;Password=Password";
-        //MySqlConnection con = new MySqlConnection(connectionInfo);
-        //con.Open();
-        //MySqlCommand cmd = new MySqlCommand("Select * from login where username='" + txtUsername.Text + "' and pwd ='" + txtPassword.Text + "'", con);
-        //MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-        //DataTable dt = new DataTable();
-        //da.Fill(dt);
-        //if (dt.Rows.Count > 0)
-        //{
-        //    Response.Redirect("UserPage.aspx");
-        //}
-        //else
-        //{
-        //    Response.Write("<script>alert('Please enter valid Username and Password')</script>");
-        //}
         if (RegexpCheck(txtUsername.Text, txtPassword.Text))
         {
             MD5 md5Hash = MD5.Create();
@@ -72,22 +51,13 @@ public partial class login : System.Web.UI.Page
 
             if (VerifyMd5Hash(md5Hash, txtPassword.Text, hashed_pass))
             {
-                //MyMessage = "Kirjautuminen onnistui";
-                //ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + MyMessage + "');", true);
-
                 //session muuttujiin käyttäjän numero taulusta, jotta löydämme oikeat kommentit
                 string queryCheckUserNumber = "SELECT * FROM USER_TBL WHERE name = '" + txtUsername.Text + "'";
                 string user_FK = CheckCommand(queryCheckUserNumber, connectionString, 0);
                 Session["UserNumber"] = user_FK;
 
-                //Pitäisi authenticoida käyttäjä!!!!
-                //Jonkin alla olevista pitäisi saada authenticoitua käyttäjä
-                //FormsAuthentication.Authenticate(txtUsername.Text, txtPassword.Text);
-                //FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, false);
-                //FormsAuthentication.SetAuthCookie(txtUsername.Text, false);
+                //Authenticointi
                 FormsAuthentication.RedirectFromLoginPage(txtUsername.Text, chkPersistCookie.Checked);
-                //FormsAuthentication.SetAuthCookie(txtUsername.Text, true);
-
 
                 //uudelleen ohjaus
                 Response.Redirect("UserPage.aspx");
@@ -165,8 +135,6 @@ public partial class login : System.Web.UI.Page
             command.Connection.Open();
             try
             {
-                //command.ExecuteNonQuery();
-                //string data = Convert.ToString(command.ExecuteNonQuery());
                 MySqlDataReader reader = command.ExecuteReader();
                 string data = "";
                 while (reader.Read())

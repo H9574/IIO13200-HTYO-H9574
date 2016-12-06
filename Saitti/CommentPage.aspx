@@ -11,15 +11,22 @@
         <asp:SqlDataSource ID ="srcDataSQL" runat="server"
             ConnectionString="<%$ ConnectionStrings:DataSQL %>"
             ProviderName="MySql.Data.MySqlClient"
-            SelectCommand="SELECT GAME_TBL.game, COMMENT_TBL.user_comment 
-            FROM COMMENT_TBL
-            INNER JOIN GAME_TBL
-            ON COMMENT_TBL.game_fk=GAME_TBL.ID"
             DeleteCommand="DELETE FROM COMMENT_TBL WHERE ID=@ID"
             UpdateCommand="UPDATE COMMENT_TBL 
             SET user_comment=@user_comment
             WHERE (ID=@ID)">
         </asp:SqlDataSource>
+        <asp:SqlDataSource ID="srcDataSQLGames" runat="server"
+            ConnectionString="<%$ ConnectionStrings:DataSQL %>"
+            ProviderName="MySql.Data.MySqlClient"
+            SelectCommand="SELECT * FROM GAME_TBL">
+        </asp:SqlDataSource>
+        <h2>Anna uusi kommentti</h2>
+        <asp:DropDownList ID="PelinValinta" AutoPostBack="true" runat="server">
+            <asp:ListItem Text="<Select Subject>" Value="0" />
+        </asp:DropDownList>
+        <asp:Textbox ID="Kommentti" runat="server"></asp:Textbox>
+        <asp:Button ID="UusiKommentti" runat="server" Text="Jukaise uusi kommentti" OnClick="UusiKommentti_Click" />
 
         <h2>Kaikki kirjoittamasi kommentit</h2>
         <asp:GridView ID="gvComment" runat="server" DataSourceID="srcDataSQL" AllowSorting="True" >
