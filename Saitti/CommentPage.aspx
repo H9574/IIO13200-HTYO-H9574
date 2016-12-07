@@ -19,11 +19,11 @@
         <asp:SqlDataSource ID="srcDataSQLGames" runat="server"
             ConnectionString="<%$ ConnectionStrings:DataSQL %>"
             ProviderName="MySql.Data.MySqlClient"
-            SelectCommand="SELECT * FROM GAME_TBL">
+            SelectCommand="SELECT ID,game FROM GAME_TBL">
         </asp:SqlDataSource>
         <h2>Anna uusi kommentti</h2>
-        <asp:DropDownList ID="PelinValinta" AutoPostBack="false" runat="server">
-            <asp:ListItem/>
+        <asp:DropDownList ID="PelinValinta" runat="server" DataSourceID="srcDataSQLGames" DataTextField="game" DataValueField="ID">
+            <asp:ListItem Text="Valitse haluamasi peli" Value="0"/>
         </asp:DropDownList><br/>
         <asp:Textbox ID="Kommentti" style="Z-INDEX: 101; LEFT: 56px; OVERFLOW: hidden; TOP: 72px" runat="server" TextMode="MultiLine"></asp:Textbox><br/>
         <asp:Button ID="UusiKommentti" runat="server" Text="Jukaise uusi kommentti" OnClick="UusiKommentti_Click" /><br/>
