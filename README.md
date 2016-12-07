@@ -18,13 +18,13 @@ Ohjelma on hyvin perustason
 ###4. Ohjelman tarvitsemat tiedostot ja tietokannat
 ###5. Bugit ja jatkokehitys
 Bugeja
-*jos kirjautuu sisään ja sulkee selaimen, selain muistaa sisään kirjautumisen, mutta unohtaa käyttäjän ID numeron, mikä rikkoo kommentoimisen ja kommenttien haun käyttäjälle.
-*kirjautuessa ulos käyttäjä jää jumiin kirjautumissivulle eikä pääse sieltä pois
+* jos kirjautuu sisään ja sulkee selaimen, selain muistaa sisään kirjautumisen, mutta unohtaa käyttäjän ID numeron, mikä rikkoo kommentoimisen ja kommenttien haun käyttäjälle.
+* kirjautuessa ulos käyttäjä jää jumiin kirjautumissivulle eikä pääse sieltä pois
 Jatkokehitys
-*tykkäämiset
-*pelien ja kommentien hakeminen tietyillä ehdoilla
-*bugien korjaus
-*visuaalisuutta, kuvia peleistä
+* tykkäämiset
+* pelien ja kommentien hakeminen tietyillä ehdoilla
+* bugien korjaus
+* visuaalisuutta, kuvia peleistä
 ###6. Oppimisen analysointi
 
 Sanna
@@ -81,6 +81,3 @@ Valtterin aikataulut
 |2.11.|4h|sivujen päähahmon tuunaus ja xml tekemistä|xml ei toimi aivan niin kuin pitäisi|
 |7.12.|6h|Viime hetken korjausta|likes painikkeita ei ehditty tehdä|
 |yhteensä|29,3h|||
-
-![Alt text](/images/kuva.png "kuva")
-
