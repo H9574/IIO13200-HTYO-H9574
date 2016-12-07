@@ -27,10 +27,10 @@ Jatkokehitys
 * visuaalisuutta, kuvia peleistä
 ###6. Oppimisen analysointi
 
-Sanna
+###Sanna
 Olen oppinut... Haasteellista oli...
 
-Valtteri
+###Valtteri
 Olen oppinut... Haasteellista oli...
 
 ###7. Töiden jako ja kulunut aika
@@ -61,9 +61,9 @@ Sannan Aikataulut
 
 Valtteri
 
-* Tallennetaan tietoa käyttäjän omaan tietokantaan
 * RSS feedin hakeminen toiselta sivulta
 * Tiedon välitys kahden sivun välillä
+* Tiedon hakeminen tietokannasta
 
 Valtterin aikataulut
 
