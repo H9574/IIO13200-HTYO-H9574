@@ -29,7 +29,7 @@
         <asp:SqlDataSource ID ="srcComments" runat="server"
             ConnectionString="<%$ ConnectionStrings:DataSQL %>"
             ProviderName="MySql.Data.MySqlClient"
-            SelectCommand="SELECT * FROM COMMENT_TBL"
+            SelectCommand="SELECT DISTINCT GAME_TBL.game, COMMENT_TBL.user_comment, USER_TBL.name FROM (COMMENT_TBL JOIN GAME_TBL ON COMMENT_TBL.game_fk = GAME_TBL.ID) JOIN USER_TBL ON (COMMENT_TBL.user_fk = USER_TBL.ID)"
             DeleteCommand="DELETE FROM COMMENT_TBL WHERE ID=@ID"
             UpdateCommand="UPDATE COMMENT_TBL 
             SET user_comment=@user_comment, likes=@likes_comment

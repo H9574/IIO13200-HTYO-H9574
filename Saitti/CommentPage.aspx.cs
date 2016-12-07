@@ -15,7 +15,7 @@ public partial class CommentPage : System.Web.UI.Page
     {
         if (!Request.IsAuthenticated)
         {
-            Response.Redirect("SignIn.aspx");
+            Response.Redirect("login.aspx");
         }
         else
         {
@@ -34,7 +34,7 @@ public partial class CommentPage : System.Web.UI.Page
         string user_FK = (string)(Session["UserNumber"]);
         //Pelitaulusta ei saa poistua mitään tai hajoaa
         //int game_FK = Int32.Parse(PelinValinta.SelectedValue);
-        int game_FK = Int32.Parse(PelinValinta.SelectedValue);
+        string game_FK = PelinValinta.DataValueField;
         ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + game_FK + "');", true);
         //string game_FK = PelinValinta.SelectedItem.Text;
         string queryString = "INSERT INTO COMMENT_TBL (user_fk,game_fk,likes,user_comment) VALUES(" + user_FK + "," + game_FK + ",'0','" + comment + "')";

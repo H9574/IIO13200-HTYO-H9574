@@ -18,7 +18,7 @@ public partial class UserPage : System.Web.UI.Page
         //lblMessage.Text = xmlfilu;
         if (!User.Identity.IsAuthenticated)
         {
-            Response.Redirect("SignIn.aspx");
+            Response.Redirect("login.aspx");
         }
     }
 

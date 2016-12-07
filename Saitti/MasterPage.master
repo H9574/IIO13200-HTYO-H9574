@@ -19,8 +19,8 @@
           <li><a href="RSSFeed.aspx"><span>RSS-syöte</span></a></li>
           <li><a href="CommentPage.aspx"><span>Omat kommentit</span></a></li>
           <li><a href="UserPage.aspx"><span>Profiili</span></a></li>
-          <li><a href="login.aspx"><span>Kirjaudu sisään/Kirjaudu ulos</span></a></li>
-          <li><a href="Registration.aspx"><span>Rekisteröidy</span></a></li>
+          <li><a href="login.aspx"><asp:Label ID="lblKirjaudu" runat="server">Kirjaudu sisään/Kirjaudu ulos</asp:Label></a></li>
+          <li><asp:label ID="lblRegister" runat="server"><a href="Registration.aspx"><span>Rekisteröidy</span></a></asp:label></li>
         </ul>
       </div>
     </div>
