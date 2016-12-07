@@ -3,7 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
-    <asp:Table">
+        <ul>
+        <asp:Button ID = 'Nappula1' runat = 'server' Text="Kirjaudu ulos" OnClick = "KirjauduUlos_Click" />
+        </ul>
         <ul>
         <asp:Label ID="Otsikkolbl" runat="server" />
         </ul>
@@ -23,9 +25,7 @@
             <asp:CheckBox id="chkPersistCookie" runat="server" autopostback="false" />
         </ul>
         <ul>
-        <asp:Button ID = 'Nappula' runat = 'server' />
+        <asp:Button ID = 'Nappula2' runat = 'server' Text="Kirjaudu sisään" OnClick = "LahetaKirjautuminen_Click" />
         </ul>
-
-    </asp:Table>
 </asp:Content>
 

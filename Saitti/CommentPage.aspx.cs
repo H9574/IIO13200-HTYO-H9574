@@ -43,7 +43,7 @@ public partial class CommentPage : System.Web.UI.Page
     private void populateDropDown()
     {
         DataTable subjects = new DataTable();
-
+        string connectionString = ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString();
         using (MySqlConnection con = new MySqlConnection(connectionString))
         {
 
@@ -57,7 +57,7 @@ public partial class CommentPage : System.Web.UI.Page
                 PelinValinta.DataValueField = "ID";
                 PelinValinta.DataBind();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // error tänne
             }
