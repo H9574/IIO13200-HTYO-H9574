@@ -22,9 +22,9 @@ public partial class CommentPage : System.Web.UI.Page
             string user_FK = (string)(Session["UserNumber"]);
             srcDataSQL.SelectCommand = "SELECT GAME_TBL.game, COMMENT_TBL.user_comment FROM COMMENT_TBL INNER JOIN GAME_TBL ON COMMENT_TBL.game_fk = GAME_TBL.ID WHERE user_fk='"+ user_FK + "'";
             populateDropDown();
-            string chosenOne = PelinValinta.SelectedItem.Text;
+            //string chosenOne = PelinValinta.SelectedItem.Text;
             PelinValinta.ClearSelection();
-            PelinValinta.Items.FindByText(chosenOne).Selected = true;
+            PelinValinta.Items.FindByText(PelinValinta.SelectedItem.Text).Selected = true;
         }
     }
     protected void UusiKommentti_Click(object sender, EventArgs e)
@@ -33,11 +33,12 @@ public partial class CommentPage : System.Web.UI.Page
         string comment = Kommentti.Text;
         string user_FK = (string)(Session["UserNumber"]);
         //Pelitaulusta ei saa poistua mitään tai hajoaa
-        //string game_FK = PelinValinta.SelectedValue;
-        string game_FK = PelinValinta.SelectedItem.Text;
-        string queryString = "INSERT INTO COMMENT_TBL (user_fk,game_fk,user_comment) VALUES(" + user_FK + "," + game_FK + ",'" + comment + "')";
-        CreateCommand(queryString, connectionString);
-        Response.Redirect(Request.RawUrl);
+        int game_FK = Int32.Parse(PelinValinta.SelectedValue);
+        ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + game_FK + "');", true);
+        //string game_FK = PelinValinta.SelectedItem.Text;
+        string queryString = "INSERT INTO COMMENT_TBL (user_fk,game_fk,likes,user_comment) VALUES(" + user_FK + "," + game_FK + ",'0','" + comment + "')";
+        //CreateCommand(queryString, connectionString);
+        //Response.Redirect(Request.RawUrl);
     }
 
     private void populateDropDown()
@@ -64,9 +65,9 @@ public partial class CommentPage : System.Web.UI.Page
 
         }
 
-        // Add the initial item - you can add this even if the options from the
-        // db were not successfully loaded
-        PelinValinta.Items.Insert(0, new ListItem("<Select Subject>", "0"));
+        // Vika mahdollisesti tässä?
+
+        PelinValinta.Items.Insert(0, new ListItem("Valitse kommentoitava peli", "0"));
 
     }
     private static void CreateCommand(string queryString, string connectionString)
