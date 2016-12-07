@@ -39,7 +39,7 @@ public partial class CommentPage : System.Web.UI.Page
         int game_FK = Int32.Parse(PelinValinta.SelectedValue);
         //ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + game_FK + "');", true);
         //string game_FK = PelinValinta.SelectedItem.Text;
-        string queryString = "INSERT INTO COMMENT_TBL (user_fk,game_fk,likes,user_comment) VALUES(" + user_FK + "," + game_FK + ",'0','" + comment + "')";
+        string queryString = "INSERT INTO COMMENT_TBL (user_fk,game_fk,likes_comment,user_comment) VALUES(" + user_FK + "," + game_FK + ",'0','" + comment + "')";
         CreateCommand(queryString, connectionString);
         Response.Redirect(Request.RawUrl);
     }
