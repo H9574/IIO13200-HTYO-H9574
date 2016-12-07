@@ -5,6 +5,7 @@
 Tekijät: Valtteri Mäntylä-Blå, Räisänen Sanna
 
 ###1. Asennus
+Asennus onnistuu kopioimalla repon Visual Studioon. Käynnistäessä ohjelman ensimmääistä kertaa, se hakee ja asentaa tarvitsemansa nugetit. Tietokantana toimii labraverkon MySQL ja sitä varten tarvitsee salasanan.
 ###2. Tietoa ohjelmasta
 
 Wiki:
@@ -13,8 +14,17 @@ https://github.com/H9574/IIO13200-HTYO-H9574/wiki
 Käyttäjä voi kirjautua sisään kommentoidakseen ja lukeakseen peleistä mielipiteitä. Hän voi lukea muiden kommentteja sekä kirjoittaa että muokata omiaan. Hän voi tykätä kommenteista tai inhota niitä. Hän voi myös lukea muille sivuille kirjoitettuja kommentteja.
 
 ###3. Kuvankaappaukset tärkeimmistä käyttöliittymistä + käyttöohje
+Ohjelma on hyvin perustason 
 ###4. Ohjelman tarvitsemat tiedostot ja tietokannat
 ###5. Bugit ja jatkokehitys
+Bugeja
+*jos kirjautuu sisään ja sulkee selaimen, selain muistaa sisään kirjautumisen, mutta unohtaa käyttäjän ID numeron, mikä rikkoo kommentoimisen ja kommenttien haun käyttäjälle.
+*kirjautuessa ulos käyttäjä jää jumiin kirjautumissivulle eikä pääse sieltä pois
+Jatkokehitys
+*tykkäämiset
+*pelien ja kommentien hakeminen tietyillä ehdoilla
+*bugien korjaus
+*visuaalisuutta, kuvia peleistä
 ###6. Oppimisen analysointi
 
 Sanna
