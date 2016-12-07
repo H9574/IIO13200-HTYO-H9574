@@ -16,6 +16,7 @@ Käyttäjä voi kirjautua sisään kommentoidakseen ja lukeakseen peleistä miel
 ###3. Kuvankaappaukset tärkeimmistä käyttöliittymistä + käyttöohje
 Ohjelma on hyvin perustason 
 ###4. Ohjelman tarvitsemat tiedostot ja tietokannat
+MySQL - labranet
 ###5. Bugit ja jatkokehitys
 Bugeja
 * jos kirjautuu sisään ja sulkee selaimen, selain muistaa sisään kirjautumisen, mutta unohtaa käyttäjän ID numeron, mikä rikkoo kommentoimisen ja kommenttien haun käyttäjälle.
@@ -25,6 +26,7 @@ Jatkokehitys
 * pelien ja kommentien hakeminen tietyillä ehdoilla
 * bugien korjaus
 * visuaalisuutta, kuvia peleistä
+
 ###6. Oppimisen analysointi
 
 ###Sanna
