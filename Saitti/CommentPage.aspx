@@ -24,9 +24,9 @@
         <h2>Anna uusi kommentti</h2>
         <asp:DropDownList ID="PelinValinta" AutoPostBack="false" runat="server">
             <asp:ListItem/>
-        </asp:DropDownList>
-        <asp:Textbox ID="Kommentti" style="Z-INDEX: 101; LEFT: 56px; OVERFLOW: hidden; POSITION: absolute; TOP: 72px" runat="server" TextMode="MultiLine"></asp:Textbox>
-        <asp:Button ID="UusiKommentti" runat="server" Text="Jukaise uusi kommentti" OnClick="UusiKommentti_Click" />
+        </asp:DropDownList><br/>
+        <asp:Textbox ID="Kommentti" style="Z-INDEX: 101; LEFT: 56px; OVERFLOW: hidden; TOP: 72px" runat="server" TextMode="MultiLine"></asp:Textbox><br/>
+        <asp:Button ID="UusiKommentti" runat="server" Text="Jukaise uusi kommentti" OnClick="UusiKommentti_Click" /><br/>
 
         <h2>Kaikki kirjoittamasi kommentit</h2>
         <asp:GridView ID="gvComment" runat="server" DataSourceID="srcDataSQL" AllowSorting="True" >

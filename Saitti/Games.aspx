@@ -22,5 +22,23 @@
                 
             </Columns>
         </asp:GridView>
-        </div>
+    </div>
+    <h2>Kaikki kommentit</h2>
+    <div>
+        <!-- commentit -->
+        <asp:SqlDataSource ID ="srcComments" runat="server"
+            ConnectionString="<%$ ConnectionStrings:DataSQL %>"
+            ProviderName="MySql.Data.MySqlClient"
+            SelectCommand="SELECT * FROM COMMENT_TBL"
+            DeleteCommand="DELETE FROM COMMENT_TBL WHERE ID=@ID"
+            UpdateCommand="UPDATE COMMENT_TBL 
+            SET user_comment=@user_comment, likes=@likes_comment
+            WHERE (ID=@ID)">
+        </asp:SqlDataSource>
+        <asp:GridView ID="gvComments" runat="server" DataSourceID="srcComments" AllowSorting="False" >
+            <Columns>
+                
+            </Columns>
+        </asp:GridView>
+    </div>
 </asp:Content>

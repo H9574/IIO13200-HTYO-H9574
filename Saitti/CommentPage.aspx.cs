@@ -33,6 +33,7 @@ public partial class CommentPage : System.Web.UI.Page
         string comment = Kommentti.Text;
         string user_FK = (string)(Session["UserNumber"]);
         //Pelitaulusta ei saa poistua mitään tai hajoaa
+        //int game_FK = Int32.Parse(PelinValinta.SelectedValue);
         int game_FK = Int32.Parse(PelinValinta.SelectedValue);
         ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + game_FK + "');", true);
         //string game_FK = PelinValinta.SelectedItem.Text;
