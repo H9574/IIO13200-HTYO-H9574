@@ -22,19 +22,19 @@ public partial class CommentPage : System.Web.UI.Page
             string user_FK = (string)(Session["UserNumber"]);
             srcDataSQL.SelectCommand = "SELECT GAME_TBL.game, COMMENT_TBL.user_comment FROM COMMENT_TBL INNER JOIN GAME_TBL ON COMMENT_TBL.game_fk = GAME_TBL.ID WHERE user_fk='"+ user_FK + "'";
             populateDropDown();
+            string chosenOne = PelinValinta.SelectedItem.Text;
+            PelinValinta.ClearSelection();
+            PelinValinta.Items.FindByText(chosenOne).Selected = true;
         }
-        /*
-        if (!IsPostBack)
-        {
-            populateDropDown();
-        }*/
     }
     protected void UusiKommentti_Click(object sender, EventArgs e)
     {
         string connectionString = ConfigurationManager.ConnectionStrings["DataSQL"].ConnectionString.ToString();
         string comment = Kommentti.Text;
         string user_FK = (string)(Session["UserNumber"]);
-        string game_FK = PelinValinta.SelectedValue;
+        //Pelitaulusta ei saa poistua mitään tai hajoaa
+        //string game_FK = PelinValinta.SelectedValue;
+        string game_FK = PelinValinta.SelectedItem.Text;
         string queryString = "INSERT INTO COMMENT_TBL (user_fk,game_fk,user_comment) VALUES(" + user_FK + "," + game_FK + ",'" + comment + "')";
         CreateCommand(queryString, connectionString);
         Response.Redirect(Request.RawUrl);
@@ -79,4 +79,5 @@ public partial class CommentPage : System.Web.UI.Page
             command.Connection.Close();
         }
     }
+
 }

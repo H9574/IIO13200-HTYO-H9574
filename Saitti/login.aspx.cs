@@ -25,15 +25,15 @@ public partial class login : System.Web.UI.Page
             Otsikkolbl.Text = "Mikä on sinun suosikki pelisi? Kirjaudu sisään ja kerro se!";
             Userlbl.Text = "Käyttäjätunnus:";
             Passlbl.Text = "Salasana:";
-            Nappula1.Visible = true;
-            Nappula2.Visible = false;
+            Nappula2.Visible = true;
+            Nappula1.Visible = false;
 
         }
         else
         {
             Otsikkolbl.Text = "Aika lähteä? Tule pian uudestaan";
-            Nappula2.Visible = true;
-            Nappula1.Visible = false;
+            Nappula1.Visible = true;
+            Nappula2.Visible = false;
             chkPersistCookie.Visible = false;
             txtPassword.Visible = false;
             txtUsername.Visible = false;
