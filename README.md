@@ -41,7 +41,7 @@ Olen oppinut Asp.net ohjelmoinnin perusteet, tietokannan käyttöä, md5 salaust
 Haasteellisiitta oli oletusasetukset, joiden olemassa ei aluksi huomannut tai inhimilliset virheet, joista visual studio ei sanonut mitään, ja monien tuntien ihmettely että miksi tämä nyt näin tekee vaikka koodin pitäisi olla oikein. Työ jämähti useaan otteeseen tällaiseen pieneen virheeseen, jonka löytäminen ja korjaaminen oli hyvin hermoja raastavaa.
 
 ###Valtteri
-Olen oppinut... Haasteellista oli...
+opin muutamia niksejä SQL:n hakuun ja siihen databindatun taulun käsittelyyn (ja ennen kaikkea taulujen yhdistämiseen asp.net-koodissa), masterpageen ohjelmoitavia toimintoja, RSS feedin käsittelyä, sekä erilaisia ratkaisuja käytännöllisiin ongelmiin muotoilua mietittäessä (DropDownListiin voipi olla huono idea laittaa omassa tapauksessamme AutoPostBack=true tai clearselection(), kun siitä tuli paljon päänvaivaa.. plus, tuplautuvat kommentit ongelman sai helposti ratkaistua lisäämällä DISTINCT taulujen yhdistyskäskyn alkupäähän)
 
 ###7. Töiden jako ja kulunut aika
 
