@@ -14,14 +14,20 @@ https://github.com/H9574/IIO13200-HTYO-H9574/wiki
 Käyttäjä voi kirjautua sisään kommentoidakseen ja lukeakseen peleistä mielipiteitä. Hän voi lukea muiden kommentteja sekä kirjoittaa että muokata omiaan. Hän voi tykätä kommenteista tai inhota niitä. Hän voi myös lukea muille sivuille kirjoitettuja kommentteja.
 
 ###3. Kuvankaappaukset tärkeimmistä käyttöliittymistä + käyttöohje
-Ohjelma on hyvin perustason 
+Ohjelma on hyvin perustason sivut, joilla voi kommentoida erilaisia pelejä ja lukea kommentteja.
+
+
+
 ###4. Ohjelman tarvitsemat tiedostot ja tietokannat
 MySQL - labranet
 ###5. Bugit ja jatkokehitys
+
 Bugeja
 * jos kirjautuu sisään ja sulkee selaimen, selain muistaa sisään kirjautumisen, mutta unohtaa käyttäjän ID numeron, mikä rikkoo kommentoimisen ja kommenttien haun käyttäjälle.
 * kirjautuessa ulos käyttäjä jää jumiin kirjautumissivulle eikä pääse sieltä pois
+
 Jatkokehitys
+* koodin siistiminen pätkistä, jotka eivät toimineet
 * tykkäämiset
 * pelien ja kommentien hakeminen tietyillä ehdoilla
 * bugien korjaus
@@ -30,7 +36,9 @@ Jatkokehitys
 ###6. Oppimisen analysointi
 
 ###Sanna
-Olen oppinut... Haasteellista oli...
+Olen oppinut Asp.net ohjelmoinnin perusteet, tietokannan käyttöä, md5 salausta sekä regular expression lauseiden laatimisen kertaamista.
+
+Haasteellisiitta oli oletusasetukset, joiden olemassa ei aluksi huomannut tai inhimilliset virheet, joista visual studio ei sanonut mitään, ja monien tuntien ihmettely että miksi tämä nyt näin tekee vaikka koodin pitäisi olla oikein. Työ jämähti useaan otteeseen tällaiseen pieneen virheeseen, jonka löytäminen ja korjaaminen oli hyvin hermoja raastavaa.
 
 ###Valtteri
 Olen oppinut... Haasteellista oli...
