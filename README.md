@@ -16,6 +16,14 @@ Käyttäjä voi kirjautua sisään kommentoidakseen ja lukeakseen peleistä miel
 ###3. Kuvankaappaukset tärkeimmistä käyttöliittymistä + käyttöohje
 Ohjelma on hyvin perustason sivut, joilla voi kommentoida erilaisia pelejä ja lukea kommentteja.
 
+![Kirjautuminen](https://github.com/H9574/IIO13200-HTYO-H9574/blob/master/Images/DataSQL.png)
+
+![Pelit ja kommentit](https://github.com/H9574/IIO13200-HTYO-H9574/blob/master/Images/DataSQL.png)
+
+![Kommentoiminen](https://github.com/H9574/IIO13200-HTYO-H9574/blob/master/Images/DataSQL.png)
+
+![Ulos kirjautuminen](https://github.com/H9574/IIO13200-HTYO-H9574/blob/master/Images/DataSQL.png)
+
 
 
 ###4. Ohjelman tarvitsemat tiedostot ja tietokannat
