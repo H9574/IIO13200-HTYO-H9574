@@ -17,17 +17,21 @@ Käyttäjä voi kirjautua sisään kommentoidakseen ja lukeakseen peleistä miel
 Ohjelma on hyvin perustason sivut, joilla voi kommentoida erilaisia pelejä ja lukea kommentteja.
 
 ![Kirjautuminen](https://github.com/H9574/IIO13200-HTYO-H9574/blob/master/Images/Kirjaudu.png)
+Kirjautuessa ja rekisteröityessä regular expression tarkistaa ensin syötteen ennen kuin lähettää sen tietokantaan. Salasana on md5 salattu.
 
 ![Pelit ja kommentit](https://github.com/H9574/IIO13200-HTYO-H9574/blob/master/Images/Pelit.png)
+Käyttäjä näkee kaikki pelit ja kommentit.
 
 ![Kommentoiminen](https://github.com/H9574/IIO13200-HTYO-H9574/blob/master/Images/Kommentit.png)
+Pelaaja voi kommentoida ja muokata sekä poistaa omia kommenttejaan.
 
 ![Ulos kirjautuminen](https://github.com/H9574/IIO13200-HTYO-H9574/blob/master/Images/Ulos.png)
-
+Käyttäjä kirjautuu ulos, minkä jälkeen jää jumiin kirjautumissivulle...
 
 
 ###4. Ohjelman tarvitsemat tiedostot ja tietokannat
 MySQL - labranet
+
 ###5. Bugit ja jatkokehitys
 
 Bugeja
@@ -37,6 +41,7 @@ Bugeja
 Jatkokehitys
 * koodin siistiminen pätkistä, jotka eivät toimineet
 * virheen käsittely kaikkiin kohtiin yhden tai kahden kohdan sijaan
+* reqular expression myös kommentin syötteen tarkistukseen
 * tykkäämiset
 * pelien ja kommentien hakeminen tietyillä ehdoilla
 * bugien korjaus
