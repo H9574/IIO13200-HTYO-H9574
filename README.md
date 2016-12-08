@@ -28,6 +28,7 @@ Bugeja
 
 Jatkokehitys
 * koodin siistiminen pätkistä, jotka eivät toimineet
+* virheen käsittely kaikkiin kohtiin yhden tai kahden kohdan sijaan
 * tykkäämiset
 * pelien ja kommentien hakeminen tietyillä ehdoilla
 * bugien korjaus
@@ -36,7 +37,7 @@ Jatkokehitys
 ###6. Oppimisen analysointi
 
 ###Sanna
-Olen oppinut Asp.net ohjelmoinnin perusteet, tietokannan käyttöä, md5 salausta sekä regular expression lauseiden laatimisen kertaamista.
+Olen oppinut Asp.net ohjelmoinnin perusteet, tietokannan käyttöä, md5 salausta sekä regular expression lauseiden laatimisen kertaamista. Ajatus oli käyttää Linq komentoja mieluummin kuin merkkijono komentoja, mutta sen jälkeen kun MySQL tietokanta oli jo valmis ja osittäin käytössä, huomasin ettei Linq tule toimeen MySQL:n kanssa. Koska meillä oli jo kaikki tarvittava tieto MySQL:ssä emmekä keksineet muuta, mihin tarvitsisimme tietokannan ja mikä olisi järkevää.
 
 Haasteellisiitta oli oletusasetukset, joiden olemassa ei aluksi huomannut tai inhimilliset virheet, joista visual studio ei sanonut mitään, ja monien tuntien ihmettely että miksi tämä nyt näin tekee vaikka koodin pitäisi olla oikein. Työ jämähti useaan otteeseen tällaiseen pieneen virheeseen, jonka löytäminen ja korjaaminen oli hyvin hermoja raastavaa.
 
