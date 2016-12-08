@@ -76,7 +76,8 @@ Sannan Aikataulut
 |2.12.|5h|Sisään kirjautuminen korjattu|Kommentteja ei näy|
 |6.12.|4h|Kommentit näkyviin ja uusien kommenttien luominen|Mitään ei voinut testata koska kone|
 |7.12.|6h|Viime hetken korjausta|likes painikkeita ei ehditty tehdä|
-|yhteensä|37,8h|||
+|8.12.|1h|Dokumentaatio ja esitys||
+|yhteensä|38,8h|||
 
 Valtteri
 
@@ -99,4 +100,5 @@ Valtterin aikataulut
 |25.11.|2h|rss-sivujen muotoilua|hankaluuksia tietokannasta haussa|
 |2.11.|4h|sivujen päähahmon tuunaus ja xml tekemistä|xml ei toimi aivan niin kuin pitäisi|
 |7.12.|6h|Viime hetken korjausta|likes painikkeita ei ehditty tehdä|
-|yhteensä|29,3h|||
+|8.12.|1h|Dokumentaatio ja esitys||
+|yhteensä|30,3h|||
