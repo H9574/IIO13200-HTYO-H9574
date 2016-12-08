@@ -40,6 +40,7 @@ MySQL - labranet
 
 Toteuttamatta jääneet ominaisuudet
 * kommenteista ja peleistä tykkäys/ei tykkäys
+* salasanan vaihtaminen (tämä ominaisuus oikeastaan unohdettiin täydellisesti)
 
 Bugeja
 * jos kirjautuu sisään ja sulkee selaimen, selain muistaa sisään kirjautumisen, mutta unohtaa käyttäjän ID numeron, mikä rikkoo kommentoimisen ja kommenttien haun käyttäjälle.
